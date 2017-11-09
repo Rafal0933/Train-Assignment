@@ -22,10 +22,6 @@ $("#train-information-form").on("submit", function(event) {
     var destination = $("#destinationInput").val().trim();
     var trainStart = $("#traintimeInput").val().trim();
     var frequency = $("#frequencyInput").val().trim();
-    console.log(trainName);
-    console.log(destination);
-    console.log(trainStart);
-    console.log(frequency);
 
     database.ref().push({
 
