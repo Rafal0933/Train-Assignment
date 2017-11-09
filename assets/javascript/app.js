@@ -1,12 +1,12 @@
-/*var config = {
-    apiKey: "AIzaSyDILcPtZWSXU_1Q95f2eIbqZ75ifxkEEew",
-    authDomain: "fir-homework-3dc85.firebaseapp.com",
-    databaseURL: "https://fir-homework-3dc85.firebaseio.com",
-    storageBucket: "fir-homework-3dc85",
-    messagingSenderId: "473218229324"
+var config = {
+    apiKey: "AIzaSyD3KbtttInL67l5FuC6WhIXxA-bwm3Fz-s",
+    authDomain: "fir-project-188a3.firebaseapp.com",
+    databaseURL: "https://fir-project-188a3.firebaseio.com",
+    storageBucket: "fir-homework-188a3",
+    messagingSenderId: "820750302472"
 };
 
-firebase.initializeApp(config);*/
+firebase.initializeApp(config);
 
 $("#train-information-form").on("submit", function(event) {
     event.preventDefault();
@@ -16,3 +16,4 @@ $("#train-information-form").on("submit", function(event) {
     var firstTrainTime =
     var frequency =*/
 });
+
