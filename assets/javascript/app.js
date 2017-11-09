@@ -36,3 +36,12 @@ $("#train-information-form").on("submit", function(event) {
     });
 });
 
+database.ref().on("child_added", function(childSnapshot){
+
+    destinationOutput = childSnapshot.val().Destination;
+    frequencyOutput = childSnapshot.val().Frequency;
+    trainNameOutput = childSnapshot.val().Name;
+    trainStartOutput = childSnapshot.val().Start;
+
+    $("#current-schedule").append("<tr>" + "<td>" + trainNameOutput + "</td>" + "<td>" + destinationOutput + "</td>"+ "<td>" + frequencyOutput + "</td>" + "<td>" + frequencyOutput + "</td>" + "<td>" + frequencyOutput + "</tr>");
+});
