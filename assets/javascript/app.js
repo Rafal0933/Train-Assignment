@@ -8,12 +8,31 @@ var config = {
 
 firebase.initializeApp(config);
 
+var database = firebase.database();
+
+var trainName = "";
+var destination = "";
+var trainStart = 0;
+var frequency = 0;
+
 $("#train-information-form").on("submit", function(event) {
     event.preventDefault();
-    var trainName = $("#mySearch").val()
+
+    var trainName = $("#trainNameInput").val().trim();
+    var destination = $("#destinationInput").val().trim();
+    var trainStart = $("#traintimeInput").val().trim();
+    var frequency = $("#frequencyInput").val().trim();
     console.log(trainName);
-/*    var destination =
-    var firstTrainTime =
-    var frequency =*/
+    console.log(destination);
+    console.log(trainStart);
+    console.log(frequency);
+
+    database.ref().push({
+
+        Destination: destination,
+        Frequency: frequency,
+        Name: trainName,
+        Start: trainStart,
+    });
 });
 
