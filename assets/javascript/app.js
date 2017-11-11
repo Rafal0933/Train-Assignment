@@ -54,15 +54,13 @@ var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm A");
     minutesAway.push(tMinutesTillTrain);
     nextArrival.push(nextTrain);
     console.log(nextTrain);
-
     })
 };
 
 frequencyConversion();
 
-
 function renderTable () {
-    console.log(minutesAway.getOwnPropertyNames);
+
     $("tbody").empty();
     state.forEach(function(element) {
         var tableRow = `
@@ -71,7 +69,7 @@ function renderTable () {
                         <td>${element.destination}</td>
                         <td>${element.frequency}</td>
                         <td>${nextArrival}</td>
-                        <td></td>
+                        <td>${minutesAway}</td>
                         </tr>
                         `
     $("tbody").append(tableRow);
