@@ -62,6 +62,7 @@ frequencyConversion();
 
 
 function renderTable () {
+    console.log(minutesAway.getOwnPropertyNames);
     $("tbody").empty();
     state.forEach(function(element) {
         var tableRow = `
@@ -69,7 +70,7 @@ function renderTable () {
                         <td>${element.trainName}</td>
                         <td>${element.destination}</td>
                         <td>${element.frequency}</td>
-                        <td>${nextArrival++}</td>
+                        <td>${nextArrival}</td>
                         <td></td>
                         </tr>
                         `
