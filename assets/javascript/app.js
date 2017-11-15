@@ -48,12 +48,11 @@ var firstTime = "03:00";
 var firstTimeConverted = moment(firstTime, "hh:mm");
 var currentTime = moment().format("hh:mm");
 var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-var timeRemainer = diffTime % timeFrequency;
-var tMinutesTillTrain = timeFrequency - timeRemainer;
 var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm A");
     minutesAway.push(tMinutesTillTrain);
     nextArrival.push(nextTrain);
-    console.log(nextTrain);
+    console.log(timeRemainer);
+    console.log(tMinutesTillTrain);
     })
 };
 
