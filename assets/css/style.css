@@ -1,0 +1,16 @@
+label, input {
+display:block;
+}
+input {
+width:100%;
+}
+select{
+width:100%;
+}
+.small {
+font-size: 0.8em;
+}
+.blockLevel {
+display:block;
+margin-right:5px;
+}

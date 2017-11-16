@@ -13,22 +13,6 @@
 		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 		<style>
-			label, input {
-				display:block;
-			}
-			input {
-				width:100%;
-			}
-			select{
-				width:100%;
-			}
-			.small {
-				font-size: 0.8em;
-			}
-			.blockLevel {
-				display:block;
-				margin-right:5px;
-			}
 		</style>
 	</head>
 	<body>
@@ -78,12 +62,12 @@
 							<input type="text" class="form-control" id="destinationInput">
 						</div>
 						<div class="form-group">
-							<label for="startTime">First Train Time (HH:mm-Military Time)</label>
-							<input type="time" class="form-control" id="traintimeInput">
+							<label for="startTime">First Train Time (HHMM)</label>
+							<input type="number" class="form-control" min="0" max="2400" id="traintimeInput">
 						</div>
 						<div class="form-group">
 							<label for="frequencyMinutes">Frequency (min):</label>
-							<input type="number" class="form-control" id="frequencyInput">
+							<input type="number" class="form-control" min="0" max="1440" id="frequencyInput">
 						</div>
 						<button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
 					</form>
